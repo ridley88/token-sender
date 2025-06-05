@@ -7,7 +7,6 @@ import {
     useAccount,
     useWaitForTransactionReceipt,
     useReadContracts,
-    useReadContract
 } from "wagmi"
 import { chainsToTSender, tsenderAbi, erc20Abi } from "@/constants"
 import { readContract, waitForTransactionReceipt } from "@wagmi/core"
@@ -15,7 +14,6 @@ import { useConfig } from "wagmi"
 import { CgSpinner } from "react-icons/cg"
 import { calculateTotal, formatTokenAmount } from "@/utils"
 import { InputForm } from "./ui/InputField"
-// import { Tabs, TabsList, TabsTrigger } from "./ui/Tabs"
 
 export default function AirdropForm() {
     const [tokenAddress, setTokenAddress] = useState("")
@@ -196,6 +194,10 @@ export default function AirdropForm() {
     function practice() {
         console.log(getAllLocalStorageEntries())
     }
+
+    //////////////
+    //// HTML ////
+    //////////////
 
     return(
     <div className={`max-w-2xl min-w-full xl:min-w-lg w-full lg:mx-auto p-6 flex flex-col gap-6 bg-white rounded-xl shadow-xl ring-[4px] border-2 mt-3`}>
